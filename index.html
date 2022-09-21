@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check</title>
+    <link rel="shortcut icon" href="./assets/img/circle-check.svg" type="image/svg">
+    <link rel="stylesheet" href="./assets/f-a/css/all.min.css">
+    <link rel="stylesheet" href="/assets/f-a/css/regular.css">
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/floating.css">
+    <script src="./assets/js/functions.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <a href="#"> <i class="fa-solid fa-circle-check"></i> CHECK</a>
+            </div>
+            <span id="seeSetting">
+                <i class="fa-solid fa-gear"></i>
+            </span>
+        </nav>
+    </header>
+    <main>
+
+        <section class="container">
+            <div class="list" id="already-do" data-draggable="target">
+                <h1>
+                    <i class="fa-solid fa-tasks"></i>
+                    Tâches déjà faites
+                </h1>
+            </div>
+            <div class="list" id="to-do" data-draggable="target">
+                <h1>
+                    <i class="fa-solid fa-calendar"></i>
+                    Tâches à faire
+                </h1>
+
+            </div>
+        </section>
+
+        <div class="floating floating-btn" id="addBtn">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div class="floating hide add-task" id="addTask">
+            <div class="floating new-task task">
+                <h1>Nouvelle Tache <i class="fa-solid fa-scroll"></i></h1>
+                <button class="close-add-task" id="closeBtn">
+                    <i class="fa-solid fa-close"></i>
+                </button>
+                <form id="addTaskForm">
+                    <div class="field">
+                        <input placeholder="Nom de la tache" type="text" name="title" id="title">
+                    </div>
+                    <div class="field">
+                        <textarea placeholder="Description" id="description"></textarea>
+                    </div>
+                    <ul class="errors">
+                    </ul>
+                    <div class="btn-group">
+                        <button type="submit" class="add" id="submitBtn">
+                            Ajouter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="floating hide add-task" id="seeTask">
+            <div class="floating new-task" id="seeTask">
+                <h1>Nouvelle Tache</h1>
+                <button class="close-add-task" id="closeBtnSeeTask">
+                    <i class="fa-solid fa-close"></i>
+                </button>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure eveniet suscipit cumque consequatur. Architecto, enim, cum alias quo cumque perferendis autem minima atque quam temporibus explicabo libero aut placeat!
+                </p>
+            </div>
+        </div>
+
+        <div class="floating hide add-task" id="settings">
+            <div class="floating settings">
+                <button class="close-add-task" id="closeSettings">
+                    <i class="fa-solid fa-close"></i>
+                </button>
+                <h2>
+                    Parametres
+                </h2>
+                <media>
+                    <article class="setting">
+                        <input type="checkbox" checked="checked" id="checkDragAndDrop" />
+                        <label for='checkDragAndDrop'>
+                            Glisser/Deposer les elements d'une liste à une autre:
+                        </label>
+                    </article>
+                    <article class="setting">
+                        <label for="selectCountry" class="ques">
+                            Langue:
+                        </label>
+                        <select id="selectCountry">
+                            <option value="fr">Francais</option>
+                            <option value="en">Anglais</option>
+                        </select>
+                    </article>
+                    <article class="setting">
+                        <label for="modeSelect" class="ques">
+                            Mode:
+                        </label>
+                        <span>
+                            Clair: <input type="radio" name="modeSelect" data-mode="light" class="selectMode" id="modeSelect1">
+                            Sombre: <input type="radio" name="modeSelect" data-mode="dark" class="selectMode" id="modeSelect2">
+                        </span>
+                    </article>
+                    <article class="setting">
+                        <label for="" class="ques">
+                            Version:
+                        </label>
+                        <span>
+                            1.0.0
+                        </span>
+                    </article>
+                    <article class="setting">
+                        <label for="" class="ques">
+                            Créé par:
+                        </label>
+                        <span>
+                            Daniel Djakam
+                        </span>
+                    </article>
+                </media>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./assets/js/const.js"></script>
+    <script src="./assets/js/task.js"></script>
+    <script src="./assets/js/settings.js"></script>
+    <script src="./assets/js/drag.js"></script>
+    <script src="./assets/js/floating.js"></script>
+</body>
+</html>

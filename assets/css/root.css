@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+	--floating_box_shadow: 2px 3px 15px rgba(0, 0, 0, 0.7);
+	--box_shadow_list: .25px 1px 6px rgba(0, 0, 0, .3);
+    --primary: rgb(7, 111, 202);
+    --main-background: rgb(239, 242, 244);
+    --white: #fff;
+    --yellow: yellow;
+    --blue-hover: rgb(32, 85, 171);
+    --red: red;
+    --red-hover: rgb(147, 4, 4);
+    --green: rgb(23, 150, 23);
+    --green-hover: rgb(23, 109, 23);
+    --black-float: rgba(177, 207, 227, .6);
+    --diluated-white: rgba(255, 255, 255, 0.7);
+}
