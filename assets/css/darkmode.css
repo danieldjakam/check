@@ -8,3 +8,10 @@ body.darkmode
 nav > .brand a{
     color: var(--brand-dark);
 }
+body.darkmode
+form > .field > textarea, 
+body.darkmode 
+form > .field > input{
+    color: var(--white);
+    background: var(--main-background-dark);
+}

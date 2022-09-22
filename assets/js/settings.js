@@ -3,7 +3,7 @@ dragAndDropChecher.addEventListener('change', (e) => {
     setSetting('checkDragAndDrop', e.target.checked);
 });
 
-selectCountry.value = getSetting('country') ? getSetting('country') : 'fr';
-selectCountry.addEventListener('change', (e) => {
-    setSetting('country', e.target.value);
+selectLang.value = getSetting('lang') ? getSetting('lang') : 'fr';
+selectLang.addEventListener('change', (e) => {
+    setSetting('lang', e.target.value);
 });

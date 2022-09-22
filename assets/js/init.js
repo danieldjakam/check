@@ -1,6 +1,11 @@
 if (getSetting('mode') === null || getSetting('mode') === undefined) {
-    setSetting('mode', 'light');
+    if (isDark) {
+        setSetting('mode', 'dark');
+    } else {
+        setSetting('mode', 'light');
+    }
 }
+console.log(isDark);
 
 let mode = getSetting('mode');
 changeMode(mode);

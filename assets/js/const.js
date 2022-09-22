@@ -7,7 +7,7 @@ const seeTaskContent     = document.querySelector('#seeTaskContent');
 const closeSettingBtn    = document.querySelector('#closeSettings');
 const seeSettingBtn      = document.querySelector('#seeSetting');
 const closeBtn           = document.querySelector('#closeBtn');
-let addBtn              = document.querySelector('#addBtn');
+let addBtn               = document.querySelector('#addBtn');
 
 // Elements for tasks
 
@@ -22,5 +22,9 @@ const todoList           = document.querySelector('#to-do');
 // Elements for drag and drop
 
 const dragAndDropChecher = document.querySelector('#checkDragAndDrop');
-const selectCountry      = document.querySelector('#selectCountry');
+const selectLang         = document.querySelector('#selectLang');
 const selectModes        = document.querySelectorAll('.selectMode');
+
+// Const for mode
+
+const isDark = window.matchMedia && window.matchMedia(`(prefers-color-scheme:dark)`).matches

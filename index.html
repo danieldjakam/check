@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/f-a/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/darkmode.css">
     <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/svg">
+
+    <script src="./assets/js/local.js"></script>
     <script src="./assets/js/functions.js"></script>
 </head>
 <body>
@@ -32,13 +34,13 @@
             <div class="list" id="already-do" data-draggable="target">
                 <h1>
                     <i class="fa-solid fa-tasks"></i>
-                    Tâches déjà faites
+                    <!-- _('already-do-task') -->
                 </h1>
             </div>
             <div class="list" id="to-do" data-draggable="target">
                 <h1>
                     <i class="fa-solid fa-calendar"></i>
-                    Tâches à faire
+                    <!-- _('already-do-task') -->
                 </h1>
 
             </div>
@@ -100,10 +102,10 @@
                         </label>
                     </article>
                     <article class="setting">
-                        <label for="selectCountry" class="ques">
+                        <label for="selectLang" class="ques">
                             Langue:
                         </label>
-                        <select id="selectCountry">
+                        <select id="selectLang">
                             <option value="fr">Francais</option>
                             <option value="en">Anglais</option>
                         </select>

@@ -139,14 +139,21 @@ const makeTasks = () => {
 
 // Change mode
 
-/*
-    @params string
-    @return void
-*/
+// Check if in setting of computer user has set dark mode
+
+
 const changeMode = (mode) => {
     if (mode === 'dark') {
         document.body.classList.add('darkmode');
     }else{
         document.body.classList.remove('darkmode');
     }
+}
+
+// For lang
+
+// Get world
+const _ = (key) => {
+    const lang = getSetting('lang') ? getSetting('lang') : 'en';
+    return worlds[lang][key]
 }
