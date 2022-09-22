@@ -152,6 +152,12 @@ button.close-add-task:hover{
     bottom: 70px;
     right: 30px;
 }
+.ques.mode{
+    margin-right: 1px;
+}
+.selectMode{
+    margin-left: 10px;
+}
 .color-choice{
     width: 15px;
     height: 15px;
