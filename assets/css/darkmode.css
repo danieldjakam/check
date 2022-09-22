@@ -4,3 +4,7 @@ body.darkmode{
 body.darkmode .add-task{
     background: var(--black-float-dark);
 }
+body.darkmode 
+nav > .brand a{
+    color: var(--brand-dark);
+}

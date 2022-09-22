@@ -134,3 +134,19 @@ const makeTasks = () => {
         alreadyDoList.appendChild(taskElement);
     }
 }
+
+// For mode
+
+// Change mode
+
+/*
+    @params string
+    @return void
+*/
+const changeMode = (mode) => {
+    if (mode === 'dark') {
+        document.body.classList.add('darkmode');
+    }else{
+        document.body.classList.remove('darkmode');
+    }
+}
