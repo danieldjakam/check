@@ -3,12 +3,11 @@
 const settingsContainer  = document.querySelector('#settings');
 const addTaskContainer   = document.querySelector('#addTask');
 const seeTaskContainer   = document.querySelector('#seeTask');
-const closeBtnSeeTask    = document.querySelector('#closeBtnSeeTask');
+const seeTaskContent     = document.querySelector('#seeTaskContent');
 const closeSettingBtn    = document.querySelector('#closeSettings');
 const seeSettingBtn      = document.querySelector('#seeSetting');
-const seeTaskBox         = document.querySelector('#seeTask > #seeTask');
 const closeBtn           = document.querySelector('#closeBtn');
-let addBtn             = document.querySelector('#addBtn');
+let addBtn              = document.querySelector('#addBtn');
 
 // Elements for tasks
 

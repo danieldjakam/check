@@ -4,17 +4,24 @@
     box-sizing: border-box;
 }
 :root{
-	--floating_box_shadow: 2px 3px 15px rgba(0, 0, 0, 0.7);
-	--box_shadow_list: .25px 1px 6px rgba(0, 0, 0, .3);
-    --primary: rgb(7, 111, 202);
-    --main-background: rgb(239, 242, 244);
+    --red: red;
     --white: #fff;
     --yellow: yellow;
-    --blue-hover: rgb(32, 85, 171);
-    --red: red;
-    --red-hover: rgb(147, 4, 4);
+    --primary-coral: coral;
+    --primary-green: green;
     --green: rgb(23, 150, 23);
+    --border: rgb(20, 141, 175);
+    --red-hover: rgb(147, 4, 4);
+    --primary: rgb(7, 111, 202);
+    --blue-hover: rgb(32, 85, 171);
     --green-hover: rgb(23, 109, 23);
+    --primary-pink: rgb(210, 74, 176);
+    --main-background: rgb(239, 242, 244);
+    --main-background-dark: rgb(13, 46, 68);
     --black-float: rgba(177, 207, 227, .6);
     --diluated-white: rgba(255, 255, 255, 0.7);
+    --primary-violet: rgba(126, 42, 149, 0.891);
+    --black-float-dark: rgba(19, 106, 164, 0.6);
+    --box_shadow_list: .25px 1px 6px rgba(0, 0, 0, .3);
+	--floating_box_shadow: 2px 3px 15px rgba(0, 0, 0, 0.7);
 }

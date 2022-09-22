@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check</title>
-    <link rel="shortcut icon" href="./assets/img/circle-check.svg" type="image/svg">
-    <link rel="stylesheet" href="./assets/f-a/css/all.min.css">
-    <link rel="stylesheet" href="/assets/f-a/css/regular.css">
     <link rel="stylesheet" href="./assets/css/root.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/floating.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/f-a/css/regular.css">
+    <link rel="stylesheet" href="./assets/f-a/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/darkmode.css">
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/svg">
     <script src="./assets/js/functions.js"></script>
 </head>
-<body>
+<body class="darkmode">
     <header>
         <nav>
             <div class="brand">
@@ -71,7 +73,7 @@
         </div>
 
         <div class="floating hide add-task" id="seeTask">
-            <div class="floating new-task" id="seeTask">
+            <div class="floating new-task" id="seeTaskContent">
                 <h1>Nouvelle Tache</h1>
                 <button class="close-add-task" id="closeBtnSeeTask">
                     <i class="fa-solid fa-close"></i>
@@ -106,6 +108,15 @@
                             <option value="en">Anglais</option>
                         </select>
                     </article>
+                    <article class="setting colors">
+                        <label for="">Couleur principale :</label>
+                        <div class="choices">
+                            <div class="color-choice bg-coral check" data-color="coral"></div>
+                            <div class="color-choice bg-green" data-color="green"></div>
+                            <div class="color-choice bg-pink" data-color="pink"></div>
+                            <div class="color-choice bg-violet" data-color="violet"></div>
+                        </div>
+                    </article>
                     <article class="setting">
                         <label for="modeSelect" class="ques">
                             Mode:
@@ -137,6 +148,7 @@
     </main>
     
     <script src="./assets/js/const.js"></script>
+    <script src="./assets/js/init.js"></script>
     <script src="./assets/js/task.js"></script>
     <script src="./assets/js/settings.js"></script>
     <script src="./assets/js/drag.js"></script>

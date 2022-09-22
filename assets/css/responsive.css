@@ -1,0 +1,33 @@
+/* @media screen and (min-width: 360px) and (max-width: 490px) {
+    .container{
+        padding: 20px;
+        display: block;
+    }
+    .list{
+        margin-bottom: 10px;
+    }
+
+} */
+
+@media screen and (max-width: 490px) {
+    .container{
+        padding: 20px;
+        display: block;
+    }
+    .list{
+        margin-bottom: 10px;
+    }
+    .list > article{
+        max-width: 500px;
+    }
+    .new-task, .settings{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 256px) {
+    .colors{
+        display: block;
+    }
+    
+}

@@ -152,3 +152,32 @@ button.close-add-task:hover{
     bottom: 70px;
     right: 30px;
 }
+.color-choice{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.color-choice.check{
+    width: 17px;
+    height: 17px;
+    border: 3px solid var(--border);
+}
+.colors{
+    display: flex;
+}
+.choices{
+    display: flex;
+}
+.bg-coral{
+    background: var(--primary-coral);
+}
+.bg-green{
+    background: var(--primary-green);
+}
+.bg-pink{
+    background: var(--primary-pink);
+}
+.bg-violet{
+    background: var(--primary-violet);
+}

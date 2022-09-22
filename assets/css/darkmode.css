@@ -1,0 +1,6 @@
+body.darkmode{
+    background: var(--main-background-dark);
+}
+body.darkmode .add-task{
+    background: var(--black-float-dark);
+}
