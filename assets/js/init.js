@@ -5,7 +5,10 @@ if (getSetting('mode') === null || getSetting('mode') === undefined) {
         setSetting('mode', 'light');
     }
 }
-console.log(isDark);
+
+if (getTasks().length < 1) { 
+    setSetting('tasks', '[]')
+}
 
 let mode = getSetting('mode');
 changeMode(mode);

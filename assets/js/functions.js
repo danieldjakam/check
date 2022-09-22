@@ -14,10 +14,6 @@ const getTasks = () => {
     }
     return tasks.length > 0 ? tasks : [];
 }
-if (getTasks().length < 1) {
-    
-    setSetting('tasks', '[]')
-}
 
 const findTasks = (id) => {
     return getTasks()[id];
@@ -98,6 +94,7 @@ const makeEmptyTaskElement  = (suit) => {
     taskElement.appendChild(span);
     return taskElement;
 }
+
 const makeTasks = () => {
     const alreadyDoTasks     = getTasks().length > 0 ? getTasks().filter(t => t.isDo === true) : [];
     const todoTasks          = getTasks().length > 0 ? getTasks().filter(t => t.isDo === false) : [];
@@ -105,13 +102,13 @@ const makeTasks = () => {
     todoList.innerHTML      = `
         <h1>
             <i class="fa-solid fa-calendar"></i>
-            Tâches à faire
+            ${_('todo-task')}
         </h1>
     `;
     alreadyDoList.innerHTML = `
         <h1>
             <i class="fa-solid fa-tasks"></i>
-            Tâches déjà faites
+            ${_('already-do-task')}
         </h1>
     `;
     if (todoTasks.length > 0) {
@@ -138,9 +135,6 @@ const makeTasks = () => {
 // For mode
 
 // Change mode
-
-// Check if in setting of computer user has set dark mode
-
 
 const changeMode = (mode) => {
     if (mode === 'dark') {

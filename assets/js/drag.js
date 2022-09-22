@@ -24,7 +24,6 @@ document.addEventListener('drop', (e) => {
             it.setAttribute('class', 'fa-solid fa-circle-check');
         };
         item.children[0].innerHtml = it;
-        console.log(item.children[0]);
         e.target.appendChild(item);
     }
 })
