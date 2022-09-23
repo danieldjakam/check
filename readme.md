@@ -27,7 +27,7 @@
     Git: <a href="https://github.com/danieldjakam">danieldjakam</a>
 </p>
 <p>
-    Email: <a href="mailto:danidjakam@gmail.com"></a>
+    Email: <a href="mailto:danidjakam@gmail.com">dani</a>
 </p>
 <p>
     Instagram: @danieldjakam
