@@ -78,7 +78,6 @@ nav > span:hover{
     box-sizing: content-box;
     padding: 1em 1em;
     cursor: pointer;
-    margin-bottom: 5px;
     max-width: 270px;
     display: flex;
     z-index: 6;
@@ -129,4 +128,11 @@ nav > span:hover{
     100% {
         transform: translateX(0px);
     }
+}
+.separator{
+    height: 10px;
+    pointer-events: none;
+}
+.separator:hover, .separator.drop{
+    height: 30px;
 }

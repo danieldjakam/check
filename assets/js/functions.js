@@ -32,6 +32,7 @@ const deleteTask = (id) => {
 
 const makeIsDoTask = (id) => {
     const tasks  = getTasks();
+    console.log(id);
     tasks[parseInt(id)].isDo = !tasks[parseInt(id)].isDo;
     setSetting('tasks', JSON.stringify(tasks));
 }
@@ -112,23 +113,48 @@ const makeTasks = () => {
         </h1>
     `;
     if (todoTasks.length > 0) {
+        const separatedElement = document.createElement('div');
+        separatedElement.setAttribute('class', 'separator');
+        todoList.appendChild(separatedElement);
         todoTasks.forEach((ta) => {
+            const separatedElement = document.createElement('div');
+            separatedElement.setAttribute('class', 'separator');
             const taskElement = makeToDoTaskElement(ta);
             todoList.appendChild(taskElement);
+            todoList.appendChild(separatedElement);
         })
+        todoList.appendChild(separatedElement);
     } else {
+        const separatedElement = document.createElement('div');
+        separatedElement.setAttribute('class', 'separator');
         const taskElement = makeEmptyTaskElement(' à faire !');
+
+        todoList.appendChild(separatedElement);
         todoList.appendChild(taskElement);
     }
     
     if (alreadyDoTasks.length > 0) {
+
+        const separatedElement = document.createElement('div');
+        separatedElement.setAttribute('class', 'separator');
+
+        alreadyDoList.appendChild(separatedElement);
         alreadyDoTasks.forEach((ta) => {
             const taskElement = makeAlreadyTaskElement(ta);
+            const separatedElement = document.createElement('div');
+
+            separatedElement.setAttribute('class', 'separator');
+            
+            alreadyDoList.appendChild(separatedElement);
             alreadyDoList.appendChild(taskElement);
         })
     } else {    
+        const separatedElement = document.createElement('div');
+        separatedElement.setAttribute('class', 'separator');
         const taskElement = makeEmptyTaskElement(' déjà faite !');
+
         alreadyDoList.appendChild(taskElement);
+        alreadyDoList.appendChild(separatedElement);
     }
 }
 

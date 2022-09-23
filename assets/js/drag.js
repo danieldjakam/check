@@ -13,6 +13,7 @@ document.addEventListener('dragover', (e) => {
 
 document.addEventListener('drop', (e) => {
     e.preventDefault();
+    e.target.classList.add('drop');
     if(e.target.dataset.draggable === 'target'){
         let it;
         if(item.parentNode.id === 'already-do'){
@@ -24,6 +25,8 @@ document.addEventListener('drop', (e) => {
             it.setAttribute('class', 'fa-solid fa-circle-check');
         };
         item.children[0].innerHtml = it;
-        e.target.appendChild(item);
+        makeIsDoTask(item.dataset.id);
+        makeTasks();
+        // e.target.appendChild(item);
     }
 })
