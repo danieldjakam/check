@@ -13,6 +13,9 @@
             We can Change the lang (coming soon).
         </li>
         <li>
+            We can download  (coming soon).
+        </li>
+        <li>
             We can use in offline mode (coming soon).
         </li>
         <li>
