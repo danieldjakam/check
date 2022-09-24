@@ -38,5 +38,5 @@
     Email: <a href="mailto:danidjakam@gmail.com">danidjakam@gmail.com</a>
 </p>
 <p>
-    Instagram: @danieldjakam
+    Instagram: <a href="https://www.instagram.com/daniel_djakam/">@daniel_djakam</a>
 </p>
