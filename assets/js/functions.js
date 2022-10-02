@@ -6,7 +6,12 @@ const getSetting = (key) => {
 };
 
 const getTasks = () => {
-    const tasks = JSON.parse(getSetting('tasks')).length > 0 && getSetting('tasks') ? JSON.parse(getSetting('tasks')).sort((a, b) => b.created_at - a.created_at) : [];
+    if (getSetting('tasks') !== null) {
+        setSetting('tasks', JSON.stringify([]));
+    }
+    const tasks = JSON.parse(getSetting('tasks')).length > 0 && getSetting('tasks') ? 
+                        JSON.parse(getSetting('tasks')).sort((a, b) => b.created_at - a.created_at) 
+                    : [];
     if (tasks.length > 0) {
         tasks.forEach((tas, id) => {
             tas.id   = id;
