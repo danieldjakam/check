@@ -4,9 +4,9 @@
     "description": "Check is a web app for make todo list.",
     "icons": [
         {
-          "src": "img/logo.svg",
-          "type": "image/svg",
-          "sizes": "150x150"
+          "src": "assets/img/logo.png",
+          "type": "image/png",
+          "sizes": "144x144"
         }
     ],
     "theme_color": "white",
