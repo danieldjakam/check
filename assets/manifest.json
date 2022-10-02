@@ -1,11 +1,16 @@
 {
-    "name": "Pwa formation",
+    "name": "Check",
+    "short_name": "CK",
+    "description": "Check is a web app for make todo list.",
     "icons": [
         {
           "src": "img/logo.svg",
-          "type": "image/svg"
+          "type": "image/svg",
+          "sizes": "150x150"
         }
     ],
-    "start_url": "/?source=pwa",
+    "theme_color": "white",
+    "background_color": "rgb(7, 111, 202)",
+    "start_url": "/?source=check",
     "display": "standalone"
 }
