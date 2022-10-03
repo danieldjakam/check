@@ -1,7 +1,8 @@
-const PREFIX = 'V2';
+const PREFIX = 'V1';
 const CACHED_FILES = [
     // Html caches
-    new Request('offline.html'),
+
+    new Request('img/logo.png'),
 
     // Css caches
     new Request('assets/css/root.css'),
@@ -21,6 +22,7 @@ const CACHED_FILES = [
     new Request('assets/js/functions.js'),
 
     // Png caches
+    new Request('assets/img/logo.png'),
     new Request('assets/img/logo.png'),
 ];
 self.addEventListener('install', (e) => {
@@ -46,7 +48,7 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    // console.log(`Fetching : ${e.request.url}`);
+    console.log(`Fetching : ${e.request.url}`);
     if (e.request.mode === 'navigate') {
         e.respondWith(
             (
@@ -56,6 +58,8 @@ self.addEventListener('fetch', (e) => {
                         if (preloadE) {
                             return preloadE;
                         }
+                        console.log(e)
+
                         return await fetch(e.request);
                     } catch (err) {
                         const cache = await caches.open(PREFIX);
@@ -67,4 +71,13 @@ self.addEventListener('fetch', (e) => {
     }else if (CACHED_FILES.includes(e.request.url)) {
         e.respondWith(caches.match(e.request))
     }
+    
+    e.respondWith((async () => {
+        const r = await caches.match(e.request);
+        if (r) { return r; }
+        const response = await fetch(e.request);
+        const cache = await caches.open(PREFIX);
+        cache.put(e.request, response.clone());
+        return response;
+    })());
 });
