@@ -1,8 +1,7 @@
-const PREFIX = 'V1';
+const PREFIX = 'V4';
 const CACHED_FILES = [
-    // Html caches
-
-    new Request('img/logo.png'),
+    // Html
+    new Request('offline.html'),
 
     // Css caches
     new Request('assets/css/root.css'),
@@ -48,7 +47,7 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    console.log(`Fetching : ${e.request.url}`);
+    // console.log(`Fetching : ${e.request.url}`);
     if (e.request.mode === 'navigate') {
         e.respondWith(
             (
@@ -71,13 +70,4 @@ self.addEventListener('fetch', (e) => {
     }else if (CACHED_FILES.includes(e.request.url)) {
         e.respondWith(caches.match(e.request))
     }
-    
-    e.respondWith((async () => {
-        const r = await caches.match(e.request);
-        if (r) { return r; }
-        const response = await fetch(e.request);
-        const cache = await caches.open(PREFIX);
-        cache.put(e.request, response.clone());
-        return response;
-    })());
 });
