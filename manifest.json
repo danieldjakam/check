@@ -9,6 +9,7 @@
           "sizes": "144x144"
         }
     ],
+    "author": "Daniel Djakam",
     "theme_color": "white",
     "background_color": "rgb(7, 111, 202)",
     "start_url": "/?source=check",
