@@ -6,7 +6,7 @@ const getSetting = (key) => {
 };
 
 const getTasks = () => {
-    if (getSetting('tasks') !== null) {
+    if (getSetting('tasks') !== undefined) {
         setSetting('tasks', JSON.stringify([]));
     }
     const tasks = JSON.parse(getSetting('tasks')).length > 0 && getSetting('tasks') ? 
@@ -26,6 +26,7 @@ const findTasks = (id) => {
 
 const addTask = (task) => {
     const tasks = [...getTasks(), task];
+    console.log(tasks);
     setSetting('tasks', JSON.stringify(tasks));
 }
 
