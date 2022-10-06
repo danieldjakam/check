@@ -1,3 +1,7 @@
+document.addEventListener('load', () => {
+    
+});
+
 if (getSetting('mode') === null || getSetting('mode') === undefined) {
     if (isDark) {
         setSetting('mode', 'dark');
