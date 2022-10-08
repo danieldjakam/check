@@ -25,3 +25,11 @@ selectModes.forEach(mo => {
         changeMode(mode)
     });
 })
+
+if (getSetting('mode') === null || getSetting('mode') === undefined) {
+    if (isDark) {
+        setSetting('mode', 'dark');
+    } else {
+        setSetting('mode', 'light');
+    }
+}
