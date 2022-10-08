@@ -22,8 +22,9 @@ const todoList           = document.querySelector('#to-do');
 // Elements for drag and drop
 
 const dragAndDropChecher = document.querySelector('#checkDragAndDrop');
-const selectLang         = document.querySelector('#selectLang');
+const selectColors        = document.querySelectorAll('.color-choice');
 const selectModes        = document.querySelectorAll('.selectMode');
+const selectLang         = document.querySelector('#selectLang');
 
 // Const for mode
 

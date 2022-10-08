@@ -161,6 +161,7 @@ button.close-add-task:hover{
 .color-choice{
     width: 15px;
     height: 15px;
+    cursor: pointer;
     border-radius: 50%;
     margin-left: 10px;
 }
