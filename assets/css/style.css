@@ -138,7 +138,7 @@ nav > span:hover{
 }
 
 .hide{
-    display: none;
+    visibility: hidden;
 }
 .show{
     display: unset;
