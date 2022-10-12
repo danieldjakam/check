@@ -183,3 +183,13 @@ const _ = (key) => {
     const lang = getSetting('lang') ? getSetting('lang') : 'en';
     return worlds[lang][key]
 }
+const checkColor = () => {
+    const color = getSetting('color') !== undefined ? getSetting('color') : 'blue';
+    selectColors.forEach(selectColor => {
+        selectColor.classList.remove('check');
+        if (selectColor.dataset.color === color) {
+            selectColor.classList.add('check');        
+        }
+    })
+    
+}
