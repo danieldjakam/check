@@ -1,25 +1,12 @@
 const laodingView = document.querySelector('#load') ;
-document.addEventListener('load', () => {
-    
-});
-document.onreadystatechange = function() 
-    {
-        if (document.readyState != "complete") 
-        {
-            document.querySelector("body").style.visibility = "hidden";
-            
-            laodingView.classList.add('hide')
-        } 
-        else 
-        {
-            laodingView.classList.add('hide')
-            document.querySelector("body").style.visibility = "visible";
-        }
-    };
-// setTimeout(() => {
-//     laodingView.classList.add('hide');
-// }, 1000)
-
+document.addEventListener('readystatechange', () => {
+    if (document.readyState !== "complete"){
+        laodingView.classList.add('hide')
+    } 
+    else{
+        laodingView.classList.add('hide')
+    }
+})
 if (getSetting('mode') === null || getSetting('mode') === undefined) {
     if (isDark) {
         setSetting('mode', 'dark');
