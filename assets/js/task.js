@@ -39,7 +39,7 @@ addTaskForm.addEventListener('submit', (e) => {
         }
         addTask(task);
         titleInput.value       = '';
-        descriptionInput.value = '';
+        descriptionInput.value   = '';
         addTaskContainer.classList.add('hide');
         makeTasks(); 
     }
