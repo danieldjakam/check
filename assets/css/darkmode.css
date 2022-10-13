@@ -1,16 +1,16 @@
-body.darkmode{
+body#darkmode{
     background: var(--main-background-dark);
 }
-body.darkmode .add-task{
+body#darkmode .add-task{
     background: var(--black-float-dark);
 }
-body.darkmode 
+body#darkmode 
 nav > .brand a{
     color: var(--brand-dark);
 }
-body.darkmode
+body#darkmode
 form > .field > textarea, 
-body.darkmode 
+body#darkmode 
 form > .field > input{
     color: var(--white);
     background: var(--main-background-dark);

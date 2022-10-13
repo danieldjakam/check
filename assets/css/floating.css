@@ -188,3 +188,6 @@ button.close-add-task:hover{
 .bg-violet{
     background: var(--primary-violet);
 }
+.bg-blue{
+    background: var(--primary-blue);
+}

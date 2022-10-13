@@ -170,9 +170,9 @@ const makeTasks = () => {
 
 const changeMode = (mode) => {
     if (mode === 'dark') {
-        document.body.classList.add('darkmode');
+        document.body.id = 'darkmode';
     }else{
-        document.body.classList.remove('darkmode');
+        document.body.id = '';
     }
 }
 
@@ -192,4 +192,11 @@ const checkColor = () => {
         }
     })
     
+}
+const changePrimaryColor = () => {
+    document.body.className = '';
+    const primary_color = getSetting('color');
+    if (primary_color !== undefined && primary_color !== null) {
+        document.body.classList.add(primary_color);
+    }
 }

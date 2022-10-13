@@ -16,6 +16,7 @@
     --primary: rgb(7, 111, 202);
     --blue-hover: rgb(32, 85, 171);
     --green-hover: rgb(23, 109, 23);
+    --primary-blue: rgb(7, 111, 202);
     --primary-pink: rgb(210, 74, 176);
     --main-background: rgb(239, 242, 244);
     --main-background-dark: rgb(13, 46, 68);
@@ -35,4 +36,32 @@
     100% {
         transform: rotate(360deg); 
     }
+}
+
+body.pink{
+    --primary: var(--primary-pink);
+    --black-float-dark: rgba(177, 75, 174, 0.6);
+    --main-background-dark: rgb(112, 7, 114);
+}
+
+body.coral{
+    --primary: var(--primary-coral);
+    --black-float-dark: rgba(167, 133, 83, 0.545);
+    --main-background-dark: rgb(101, 49, 4);
+}
+
+body.violet{
+    --primary: var(--primary-violet);
+    --black-float-dark: rgba(125, 19, 164, 0.6);
+    --main-background-dark: rgb(53, 13, 68);
+}
+body.green{
+    --primary: var(--primary-green);
+    --black-float-dark: rgba(2, 70, 39, 0.6);
+    --main-background-dark: rgb(13, 68, 40);
+}
+body.blue{
+    --primary: var(--primary-blue);
+    --black-float-dark: rgba(19, 106, 164, 0.6);
+    --main-background-dark: rgb(13, 46, 68);
 }
