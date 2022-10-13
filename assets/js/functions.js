@@ -6,7 +6,7 @@ const getSetting = (key) => {
 };
 
 const getTasks = () => {
-    if (getSetting('tasks') !== undefined) {
+    if (getSetting('tasks') === null) {
         setSetting('tasks', JSON.stringify([]));
     }
     const tasks = JSON.parse(getSetting('tasks')).length > 0 && getSetting('tasks') ? 

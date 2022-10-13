@@ -14,7 +14,7 @@ addTaskForm.addEventListener('submit', (e) => {
         }
         if (title.length > 50) {
             errors.push('titre trop long maximum 50 caracteres.');
-        }
+        }   
         if (description && description.length < 10) {
             errors.push('Description trop courte minimum 10 caracteres.');
         }
@@ -38,8 +38,8 @@ addTaskForm.addEventListener('submit', (e) => {
             created_at : Date.now()
         }
         addTask(task);
-        title       = '';
-        description = '';
+        titleInput.value       = '';
+        descriptionInput.value = '';
         addTaskContainer.classList.add('hide');
         makeTasks(); 
     }
