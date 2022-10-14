@@ -46,14 +46,3 @@ addTaskForm.addEventListener('submit', (e) => {
     
 });
 const tasks = document.querySelectorAll('.list > article');
-
-
-{/* <article draggable="true">
-<input type="checkbox" name="" id="">
-<span class="title">
-    Apprendre le Js
-</span>
-<div class="trash">
-    <i class="fa-solid fa-trash"></i>
-</div>
-</article> */}
