@@ -133,9 +133,6 @@ nav > span:hover{
     height: 10px;
     pointer-events: none;
 }
-.separator:hover, .separator.drop{
-    height: 30px;
-}
 
 .hide{
     visibility: hidden;

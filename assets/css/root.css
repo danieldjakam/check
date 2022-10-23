@@ -8,7 +8,6 @@
     --white: #fff;
     --yellow: yellow;
     --primary-coral: coral;
-    --brand-dark: rgb(91, 153, 201);
     --primary-green: green;
     --green: rgb(23, 150, 23);
     --border: rgb(20, 141, 175);
@@ -16,6 +15,7 @@
     --primary: rgb(7, 111, 202);
     --blue-hover: rgb(32, 85, 171);
     --green-hover: rgb(23, 109, 23);
+    --brand-dark: rgb(91, 153, 201);
     --primary-blue: rgb(7, 111, 202);
     --primary-pink: rgb(210, 74, 176);
     --main-background: rgb(239, 242, 244);

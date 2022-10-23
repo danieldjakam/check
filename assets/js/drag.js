@@ -13,8 +13,9 @@ document.addEventListener('dragover', (e) => {
 
 document.addEventListener('dragenter', (e) => {
     e.preventDefault();
-    if (e.target.classList.contains('separator')) {
-        e.target.style.height = '800px'
+    if (e.target.id === 'separator')
+    {
+        e.target.style.height = '30px'
     }
 })
 document.addEventListener('drop', (e) => {

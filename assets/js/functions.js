@@ -105,6 +105,7 @@ const makeEmptyTaskElement  = (suit) => {
 const makeSeparator = () => {
     const separator = document.createElement('div');
     separator.setAttribute('class', 'separator');
+    separator.setAttribute('id', 'separator');
     return separator;
 }
 
