@@ -22,30 +22,19 @@ if (tasks !== null) {
                 }
                 const taskForThisElement = findTasks(element.dataset.id)
                 // console.log(taskForThisElement);
-                seeTaskContent.innerHTML = `
-                    <h1>${taskForThisElement.title}</h1>
-                    <button class="close-add-task" id="closeBtnSeeTask">
-                        <i class="fa-solid fa-close"></i>
-                    </button>
-                    <p>
-                        ${taskForThisElement.description}
-                    </p>
-                `;
+                seeTaskContent.innerHTML = displaySeeTask(taskForThisElement, isEdit)
                 const closeBtnSeeTask    = document.querySelector('#closeBtnSeeTask');
+                const editBtnSeeTask    = document.querySelector('#editTask');
                 const seeTaskBox         = document.querySelector('#seeTask > #seeTaskContent');
                 closeBtnSeeTask.addEventListener('click', () => {
                     seeTaskContainer.classList.add('hide');
                     tasks.forEach(el => el.classList.remove('waddle'))
                 })
+                editBtnSeeTask.addEventListener('click', (e) => {
+                    isEdit = !isEdit;
+                    seeTaskContent.innerHTML = displaySeeTask(taskForThisElement, isEdit)
+                })
                 seeTaskContainer.classList.remove('hide');
-                // let infoBox = {
-                //     width : seeTaskBox.clientWidth,
-                //     heigth: seeTaskBox.clientHeight
-                // };
-                // if (info.x) {
-                    
-                // }
-                
                 seeTaskBox.style.rigth = (info.x) + 'px';
                 seeTaskBox.style.top  = (info.y) + 'px';
             });

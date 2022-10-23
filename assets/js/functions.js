@@ -24,6 +24,41 @@ const findTasks = (id) => {
     return getTasks()[id];
 }
 
+const displaySeeTask = (task, test) => {
+    return !test ? `
+                    <h1>${task.title}</h1>
+                    <button class="close-add-task" id="closeBtnSeeTask">
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                    <p>
+                        ${task.description}
+                    </p>
+                    <button class="edit-task-btn" id="editTask">
+                        Edit <i class="fa-solid fa-edit"></i>
+                    </button>
+                ` : `
+                    <h1>Edit Task <i class="fa-solid fa-scroll"></i></h1>
+                    <button class="close-add-task" id="closeBtnSeeTask">
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                    <form id="addTaskForm">
+                        <div class="field">
+                            <input placeholder="Nom de la tache" type="text" value=${task.title} name="title" id="title">
+                        </div>
+                        <div class="field">
+                            <textarea placeholder="Description" id="description">${task.description}</textarea>
+                        </div>
+                        <ul class="errors">
+                        </ul>
+                        <div class="btn-group">
+                            <button type="submit" class="add" id="submitBtn">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                `;
+}
+
 const addTask = (task) => {
     const tasks = [...getTasks(), task];
     console.log(tasks);

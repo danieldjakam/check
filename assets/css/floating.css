@@ -191,3 +191,16 @@ button.close-add-task:hover{
 .bg-blue{
     background: var(--primary-blue);
 }
+.edit-task-btn{
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    padding: 10px 12px;
+    background: rgb(26, 157, 26);
+}
+.edit-task-btn:hover{
+    background: rgb(15, 117, 17);
+}

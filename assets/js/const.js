@@ -18,6 +18,7 @@ const addTaskForm        = document.querySelector('form#addTaskForm');
 const titleInput         = document.querySelector('input#title');
 const submitBtn          = document.querySelector('button#submitBtn');
 const todoList           = document.querySelector('#to-do');
+let isEdit               = false; 
 
 // Elements for drag and drop
 
