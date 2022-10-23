@@ -11,6 +11,12 @@ document.addEventListener('dragover', (e) => {
     e.preventDefault();
 })
 
+document.addEventListener('dragenter', (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains('separator')) {
+        e.target.style.height = '800px'
+    }
+})
 document.addEventListener('drop', (e) => {
     e.preventDefault();
     e.target.classList.add('drop');

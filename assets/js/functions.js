@@ -102,6 +102,12 @@ const makeEmptyTaskElement  = (suit) => {
     return taskElement;
 }
 
+const makeSeparator = () => {
+    const separator = document.createElement('div');
+    separator.setAttribute('class', 'separator');
+    return separator;
+}
+
 const makeTasks = () => {
     const alreadyDoTasks     = getTasks().length > 0 ? getTasks().filter(t => t.isDo === true) : [];
     const todoTasks          = getTasks().length > 0 ? getTasks().filter(t => t.isDo === false) : [];
@@ -119,48 +125,36 @@ const makeTasks = () => {
         </h1>
     `;
     if (todoTasks.length > 0) {
-        const separatedElement = document.createElement('div');
-        separatedElement.setAttribute('class', 'separator');
-        todoList.appendChild(separatedElement);
+        todoList.appendChild(makeSeparator());
+
         todoTasks.forEach((ta) => {
-            const separatedElement = document.createElement('div');
-            separatedElement.setAttribute('class', 'separator');
             const taskElement = makeToDoTaskElement(ta);
+
             todoList.appendChild(taskElement);
-            todoList.appendChild(separatedElement);
+            todoList.appendChild(makeSeparator());
         })
-        todoList.appendChild(separatedElement);
+        todoList.appendChild(makeSeparator());
     } else {
-        const separatedElement = document.createElement('div');
-        separatedElement.setAttribute('class', 'separator');
         const taskElement = makeEmptyTaskElement(' à faire !');
 
-        todoList.appendChild(separatedElement);
+        todoList.appendChild(makeSeparator());
         todoList.appendChild(taskElement);
     }
     
     if (alreadyDoTasks.length > 0) {
-
-        const separatedElement = document.createElement('div');
-        separatedElement.setAttribute('class', 'separator');
-
-        alreadyDoList.appendChild(separatedElement);
+        alreadyDoList.appendChild(makeSeparator());
         alreadyDoTasks.forEach((ta) => {
             const taskElement = makeAlreadyTaskElement(ta);
-            const separatedElement = document.createElement('div');
-
-            separatedElement.setAttribute('class', 'separator');
             
-            alreadyDoList.appendChild(separatedElement);
             alreadyDoList.appendChild(taskElement);
+            alreadyDoList.appendChild(makeSeparator());
         })
+        todoList.appendChild(makeSeparator());
     } else {    
-        const separatedElement = document.createElement('div');
-        separatedElement.setAttribute('class', 'separator');
         const taskElement = makeEmptyTaskElement(' déjà faite !');
 
         alreadyDoList.appendChild(taskElement);
-        alreadyDoList.appendChild(separatedElement);
+        alreadyDoList.appendChild(makeSeparator());
     }
 }
 
