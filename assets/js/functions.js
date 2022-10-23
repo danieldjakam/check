@@ -31,7 +31,7 @@ const displaySeeTask = (task, test) => {
                         <i class="fa-solid fa-close"></i>
                     </button>
                     <p>
-                        ${task.description}
+                        ${task.description ? task.description : 'No description...'}
                     </p>
                     <button class="edit-task-btn" id="editTask">
                         Edit <i class="fa-solid fa-edit"></i>
@@ -41,12 +41,12 @@ const displaySeeTask = (task, test) => {
                     <button class="close-add-task" id="closeBtnSeeTask">
                         <i class="fa-solid fa-close"></i>
                     </button>
-                    <form id="addTaskForm">
+                    <form id="editTask" data-id=${task.id}>
                         <div class="field">
-                            <input placeholder="Nom de la tache" type="text" value=${task.title} name="title" id="title">
+                            <input placeholder="Nom de la tache" type="text" value=${task.title} name="e_title" id="e_title">
                         </div>
                         <div class="field">
-                            <textarea placeholder="Description" id="description">${task.description}</textarea>
+                            <textarea placeholder="Description" id="e_description">${task.description}</textarea>
                         </div>
                         <ul class="errors">
                         </ul>
@@ -61,7 +61,6 @@ const displaySeeTask = (task, test) => {
 
 const addTask = (task) => {
     const tasks = [...getTasks(), task];
-    console.log(tasks);
     setSetting('tasks', JSON.stringify(tasks));
 }
 
@@ -126,6 +125,13 @@ const makeAlreadyTaskElement = (task) => {
     taskElement.appendChild(div);
     
     return taskElement;
+}
+
+const editTask = (new_task, id) => {
+    const tasks = getTasks();
+    tasks[id].title = new_task.title;
+    tasks[id].description = new_task.description;
+    setSetting('tasks', JSON.stringify(tasks));
 }
 
 const makeEmptyTaskElement  = (suit) => {
