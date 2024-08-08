@@ -73,6 +73,8 @@ nav > span:hover{
 .list > h1{
     margin-bottom: 10px;
     text-align: center;
+    background: #000;
+    
 }
 .list > article{
     box-sizing: content-box;

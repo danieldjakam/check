@@ -155,49 +155,65 @@ const makeTasks = () => {
     const todoTasks          = getTasks().length > 0 ? getTasks().filter(t => t.isDo === false) : [];
     // console.log(todoTasks );
     todoList.innerHTML      = `
-        <h1>
-            <i class="fa-solid fa-calendar"></i>
-            ${_('todo-task')}
-        </h1>
+        <div class="task-header">
+            <h1>
+                <i class="fa-solid fa-tasks"></i>
+                ${_('todo-task')}
+            </h1>
+        </div>
     `;
     alreadyDoList.innerHTML = `
-        <h1>
-            <i class="fa-solid fa-tasks"></i>
-            ${_('already-do-task')}
-        </h1>
+        <div class="task-header">
+            <h1>
+                <i class="fa-solid fa-tasks"></i>
+                ${_('already-do-task')}
+            </h1>
+        </div>
     `;
+
+    const toDoTasksContainer = document.createElement('div');
+    toDoTasksContainer.setAttribute('class', 'taskContainer');
+
+    const alreadyDoTasksContainer = document.createElement('div');
+    alreadyDoTasksContainer.setAttribute('class', 'taskContainer');
+
+    console.log(alreadyDoList);
+    
     if (todoTasks.length > 0) {
-        todoList.appendChild(makeSeparator());
+        // toDoTasksContainer.appendChild(makeSeparator());
 
         todoTasks.forEach((ta) => {
             const taskElement = makeToDoTaskElement(ta);
 
-            todoList.appendChild(taskElement);
-            todoList.appendChild(makeSeparator());
+            toDoTasksContainer.appendChild(taskElement);
+            toDoTasksContainer.appendChild(makeSeparator());
         })
-        todoList.appendChild(makeSeparator());
+        toDoTasksContainer.appendChild(makeSeparator());
     } else {
         const taskElement = makeEmptyTaskElement(' à faire !');
 
-        todoList.appendChild(makeSeparator());
-        todoList.appendChild(taskElement);
+        toDoTasksContainer.appendChild(makeSeparator());
+        toDoTasksContainer.appendChild(taskElement);
     }
     
     if (alreadyDoTasks.length > 0) {
-        alreadyDoList.appendChild(makeSeparator());
+        // alreadyDoTasksContainer.appendChild(makeSeparator());
         alreadyDoTasks.forEach((ta) => {
             const taskElement = makeAlreadyTaskElement(ta);
             
-            alreadyDoList.appendChild(taskElement);
-            alreadyDoList.appendChild(makeSeparator());
+            alreadyDoTasksContainer.appendChild(taskElement);
+            alreadyDoTasksContainer.appendChild(makeSeparator());
         })
         todoList.appendChild(makeSeparator());
     } else {    
         const taskElement = makeEmptyTaskElement(' déjà faite !');
 
-        alreadyDoList.appendChild(taskElement);
-        alreadyDoList.appendChild(makeSeparator());
+        alreadyDoTasksContainer.appendChild(taskElement);
+        alreadyDoTasksContainer.appendChild(makeSeparator());
     }
+
+    todoList.appendChild(toDoTasksContainer);
+    alreadyDoList.appendChild(alreadyDoTasksContainer)
 }
 
 // For mode
