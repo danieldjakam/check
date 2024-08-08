@@ -13,16 +13,16 @@
             We can drag/drop an element of list into other.
         </li>
         <li>
-            We can Change the lang (coming soon).
+            We can choose principal color.
+        </li>
+        <li>
+            We can Change the language (coming soon).
         </li>
         <li>
             We have the PWA (coming soon).
         </li>
         <li>
             We can use in offline mode (coming soon).
-        </li>
-        <li>
-            We can choose principal color (coming soon).
         </li>
         <li>
             (...)
