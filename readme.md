@@ -16,10 +16,10 @@
             We can choose principal color.
         </li>
         <li>
-            We can Change the language (coming soon).
+            We have the PWA .
         </li>
         <li>
-            We have the PWA (coming soon).
+            We can Change the language (coming soon).
         </li>
         <li>
             We can use in offline mode (coming soon).
