@@ -50,7 +50,8 @@ nav > span:hover{
 }
 
 .list{
-    padding-top: 10px;
+    width: 400px;
+    /* padding-top: 10px; */
     border-radius: 20px;
     padding: 10px 1em;
     color: var(--white);
@@ -59,24 +60,36 @@ nav > span:hover{
     flex-direction: column;
 	background: var(--primary);
 	box-shadow: var(--box_shadow_list);
-    overflow-y: scroll;
 }
-.list::-webkit-scrollbar{
-    overflow: hidden;
-    width: 10px;
-}
-.list::-webkit-scrollbar-thumb{
-    background: var(--white);
-    width: 1px;
-    border-radius: 10px;
-}
-.list > h1{
+
+.list .task-header {
     margin-bottom: 10px;
     text-align: center;
-    background: #000;
-    
+    padding: 20px;
+    height: 80px;
+    /* background: #000; */
 }
-.list > article{
+
+.list .taskContainer{
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+
+.taskContainer::-webkit-scrollbar{
+    width: 10px;
+}
+.taskContainer::-webkit-scrollbar-thumb{
+    background: var(--white);
+    width: .5px;
+    border-radius: 10px;
+}
+
+.list article{
+    width: 100%;
     box-sizing: content-box;
     padding: 1em 1em;
     cursor: pointer;
@@ -87,30 +100,31 @@ nav > span:hover{
     border: 1px solid var(--white);
     border-radius: 10px;
     white-space: nowrap;
+    margin-bottom: 10px;
 }
-.list > article > .title{
+.list article > .title{
     text-overflow: ellipsis;
     overflow: hidden;
     width: 80%;
     margin: 0px 5px;
 }
-.list > article > .title:hover{
+.list article > .title:hover{
     color: var(--yellow);
     font-weight: 900;
 }
-.list > article .trash{
+.list article .trash{
     background: var(--red);
     padding: 10px 12px;
     border-radius: 7.5px;
 }
-.list > article .trash:hover {
+.list article .trash:hover {
     background: var(--red-hover);
 }
-.list > article.waddle{
+.list article.waddle{
     animation: waddle 1s infinite;
     border: 2px solid var(--yellow);
 }
-.list > article > span.do{
+.list article > span.do{
     text-decoration:line-through;
 }
 
